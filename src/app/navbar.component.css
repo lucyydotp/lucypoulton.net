@@ -4,7 +4,7 @@
   padding: 0.7em;
   text-align: center;
   font-size: 2em;
-  box-shadow: 0 0 5px 1px #0004;
+  box-shadow: var(--shadow);
   box-sizing: border-box;
   margin-bottom: 1em;
   color: var(--light-primary);

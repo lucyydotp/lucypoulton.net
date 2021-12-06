@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&family=Roboto+Mono&display=swap');
 
 :root {
   --colour-red: #f0918f;
@@ -26,6 +26,8 @@
   --gradient-accent: linear-gradient(135deg, var(--colour-purple-dark), var(--colour-pink-dark));
 
   --transition-curve: cubic-bezier(.9,-0.5,.1,1.49);
+
+  --shadow: 0 0 4px 4px #0001;
 }
 
 body {
@@ -63,4 +65,27 @@ router-outlet + *:not(navbar) {
 
 a {
   color: inherit;
+}
+
+.button {
+  display: inline-block;
+  box-shadow: var(--shadow);
+  border-radius: 1em;
+  transition: transform 0.3s var(--transition-curve);
+  margin: 0 2em;
+}
+
+.button > h4 {
+  box-shadow: none;
+  margin: 0;
+  padding: 1em 0 0;
+  font-size: 1.3em;
+}
+
+.button > p {
+  padding: 0 1em;
+}
+
+.button:hover {
+  transform: scale(1.05, 1.05);
 }

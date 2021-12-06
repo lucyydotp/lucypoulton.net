@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './index/index.component';
 import { ProjectComponent } from './project/project.component';
 import {DelayDeactivateGuard} from "./delay";
+import {ProjectProvider} from "./project";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {DelayDeactivateGuard} from "./delay";
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DelayDeactivateGuard],
+  providers: [DelayDeactivateGuard, ProjectProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {

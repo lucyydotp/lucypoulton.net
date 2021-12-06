@@ -6,3 +6,11 @@
 
 <h2>&lt;insert cool front page here&gt;</h2>
 <a routerLink="/a">Go somewhere</a>
+<h2>Projects</h2>
+<span>Here's the stuff I'm working on at the moment.</span>
+<div class="projectBox">
+  <div class="button" *ngFor="let project of projectProvider.projects" routerLink="/{{project.name}}">
+    <h4>{{project.displayName}}</h4>
+    <p>{{project.description}}</p>
+  </div>
+</div>

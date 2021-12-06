@@ -1,2 +1,13 @@
-<h1>{{id}}</h1>
-<a routerLink="/">Go back</a>
+<div *ngIf="project === undefined; else projectExists">
+  <h1>There's nothing here.</h1>
+  <h3>There's no project on the site with that name. Sorry about that.</h3>
+  <a routerLink="/">Go home</a>
+</div>
+<ng-template #projectExists>
+  <h1>{{project?.displayName}}</h1>
+  <div class="button">
+    <h4 class="button">Download</h4>
+    <p>Version {{project?.lastRelease}}</p>
+  </div>
+  <a routerLink="/">Go back</a>
+</ng-template>
