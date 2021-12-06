@@ -23,11 +23,13 @@
   --light-primary: #e7e4e7;
   --light-secondary: #b7aeb7;
 
-  --gradient-accent: linear-gradient(135deg, var(--colour-purple-dark), var(--colour-pink-dark))
+  --gradient-accent: linear-gradient(135deg, var(--colour-purple-dark), var(--colour-pink-dark));
+
+  --transition-curve: cubic-bezier(.9,-0.5,.1,1.49);
 }
 
 body {
-  transition: color 0.1s, background 0.2s;
+  transition: color .2s, background .2s;
   font-family: "Readex Pro", sans-serif;
 }
 
@@ -46,7 +48,7 @@ router-outlet, navbar {
 }
 
 router-outlet + *:not(navbar) {
-  transition: 0.5s cubic-bezier(.9,-0.5,.1,1.49);
+  transition: padding-top 0.5s var(--transition-curve), opacity 0.5s var(--transition-curve);
   position: relative;
   opacity: 1;
   display: block;
