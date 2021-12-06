@@ -50,7 +50,8 @@ router-outlet, navbar {
 }
 
 router-outlet + *:not(navbar) {
-  transition: padding-top 0.5s var(--transition-curve), opacity 0.5s var(--transition-curve);
+  transition: padding-top 0.5s var(--transition-curve), opacity 0.5s var(--transition-curve), transform 0.5s var(--transition-curve);
+  transform-origin: top;
   position: relative;
   opacity: 1;
   display: block;
@@ -61,6 +62,7 @@ router-outlet + *:not(navbar) {
 .hidden router-outlet + *:not(navbar) {
   padding-top: 3em;
   opacity: 0;
+  transform: scale(1, 1.1);
 }
 
 a {
