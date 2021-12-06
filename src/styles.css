@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Roboto+Mono&display=swap');
+
+:root {
+  --colour-red: #f0918f;
+  --colour-yellow: #db9f6c;
+  --colour-green: #82b97c;
+  --colour-cyan: #40beaa;
+  --colour-blue: #61b2f0;
+  --colour-purple: #afa2e8;
+  --colour-pink: #dd94ca;
+
+  --colour-red-dark: #b25d5d;
+  --colour-yellow-dark: #9d6c3a;
+  --colour-green-dark: #49844a;
+  --colour-cyan-dark: #008776;
+  --colour-blue-dark: #397db8;
+  --colour-purple-dark: #7f6db1;
+  --colour-pink-dark: #a65f94;
+
+  --dark-primary: #1d1f21;
+  --dark-secondary: #2b2e31;
+
+  --light-primary: #e7e4e7;
+  --light-secondary: #b7aeb7;
+
+  --gradient-accent: linear-gradient(135deg, var(--colour-purple-dark), var(--colour-pink-dark))
+}
+
+body {
+  transition: color 0.1s, background 0.2s;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.bg-dark {
+  background: var(--dark-primary);
+  color: var(--light-primary);
+}
+
+.bg-light {
+  background: var(--light-primary);
+  color: var(--dark-primary);
+}
+
+router-outlet, navbar {
+  user-select: none;
+}
+
+router-outlet + *:not(navbar) {
+  transition: 0.5s cubic-bezier(.9,-0.5,.1,1.49);
+  position: relative;
+  opacity: 1;
+  display: block;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.hidden router-outlet + *:not(navbar) {
+  padding-top: 3em;
+  opacity: 0;
+}
+
+a {
+  color: inherit;
+}
