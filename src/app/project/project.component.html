@@ -9,8 +9,10 @@
     <h4 class="button">Download</h4>
     <p>Version {{project?.lastRelease}}</p>
   </div>
-  <div>
-    <span *ngFor="let link of Object.entries(project?.links)">{{link[0]}}</span>
+  <div class="links">
+  <span *ngFor="let link of project?.links| keyvalue"><a href="{{link.value}}">{{link.key}}</a></span>
+    <span><a href="https://github.com/{{project?.repo}}">Source</a></span>
+    <span><a href="https://github.com/{{project?.repo}}/issues">Issues</a></span>
   </div>
   <div [innerHtml]="project?.longDescription"></div>
 </ng-template>

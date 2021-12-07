@@ -1,0 +1,7 @@
+.links span:not(:last-child)::after {
+    content: " | ";
+    text-decoration: none;
+}
+.links {
+    margin: 1em;
+}

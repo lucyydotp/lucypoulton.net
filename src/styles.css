@@ -55,14 +55,14 @@ router-outlet + *:not(navbar) {
   position: relative;
   opacity: 1;
   display: block;
-  padding-top: 1em;
+  padding: 1em;
   text-align: center;
 }
 
 .hidden router-outlet + *:not(navbar) {
   padding-top: 3em;
   opacity: 0;
-  transform: scale(1, 1.1);
+  transform: scaleY(1.1);
 }
 
 a {
@@ -91,4 +91,9 @@ a {
 
 div.button:hover {
   transform: scale(1.05, 1.05);
+}
+
+.bg-dark .dark-only, .bg-light .light-only {
+  transform: translateY(-100px) scaleY(2);
+  
 }

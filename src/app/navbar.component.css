@@ -6,7 +6,7 @@
   font-size: 2em;
   box-shadow: var(--shadow);
   box-sizing: border-box;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   color: var(--light-primary);
   background: var(--gradient-accent);
 }
@@ -15,4 +15,14 @@
   position: absolute;
   right: 1em;
   user-select: none;
+}
+
+.toggle span {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  transition: transform 0.5s var(--transition-curve);
+  font-size: 0.8em;
+  width: 1em;
+  text-align: center;
 }
