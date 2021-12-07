@@ -75,6 +75,7 @@ a {
   border-radius: 1em;
   transition: transform 0.3s var(--transition-curve);
   margin: 0 2em;
+  user-select: none;
 }
 
 .button > h4 {
@@ -88,6 +89,6 @@ a {
   padding: 0 1em;
 }
 
-.button:hover {
+div.button:hover {
   transform: scale(1.05, 1.05);
 }

@@ -5,8 +5,12 @@
 </div>
 <ng-template #projectExists>
   <h1>{{project?.displayName}}</h1>
-  <div class="button">
+  <div class="button" (click)="redirectToDownload()">
     <h4 class="button">Download</h4>
     <p>Version {{project?.lastRelease}}</p>
   </div>
+  <div>
+    <span *ngFor="let link of Object.entries(project?.links)">{{link[0]}}</span>
+  </div>
+  <div [innerHtml]="project?.longDescription"></div>
 </ng-template>
