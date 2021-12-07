@@ -78,6 +78,10 @@ a {
   user-select: none;
 }
 
+.bg-dark .button {
+  background: var(--dark-secondary);
+}
+
 .button > h4 {
   box-shadow: none;
   margin: 0;
