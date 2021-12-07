@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'lucypoulton-dot-net';
   constructor(router: Router) {
     router.events.subscribe(ev => {
-      if (ev instanceof NavigationEnd) setTimeout(() => document.body.classList.remove("hidden"), 0)
+      if (ev instanceof NavigationEnd) setTimeout(() => document.body.classList.remove("hidden"), 20)
     })
   }
 }
