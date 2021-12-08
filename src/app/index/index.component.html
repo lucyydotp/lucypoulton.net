@@ -2,15 +2,15 @@
 <div>
   <a href="https://github.com/lucypoulton">GitHub</a> |
   <a href="https://discord.lucypoulton.net">Discord</a> |
-  <a href="#" onclick="alert('lucy@<this domain>\n\n')">Email</a>
+  <a href="#" onclick="alert('lucy@<this domain>\n\nSadly if I just put my email here I end up with all kinds of spam.')">Email</a>
 </div>
-<p>I'm a teenage developer from the UK. I write silly little projects for fun. I try not to take myself too seriously, 
+<p>I'm a teenage developer from the UK. I write silly little projects for fun. I try not to take myself too seriously,
   but I thoroughly enjoy spending time making my work the best it can be.</p>
   <p>I mostly work in Java, Kotlin, and JavaScript/TypeScript, but I'm always up for learning something new. I'm a fan of Angular for web stuff.</p>
 <h2>Projects</h2>
 <span>Here's the stuff I'm working on at the moment.</span>
 <div class="projectBox">
-  <div class="button" *ngFor="let project of projectProvider.projects" routerLink="/{{project.name}}">
+  <div class="button" *ngFor="let project of environment.projects" routerLink="/{{project.name}}">
     <h4>{{project.displayName}}</h4>
     <p>{{project.description}}</p>
   </div>

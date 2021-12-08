@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProjectProvider} from "../project";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-index',
@@ -8,9 +8,8 @@ import {ProjectProvider} from "../project";
 })
 export class IndexComponent implements OnInit {
 
-  constructor(public projectProvider: ProjectProvider) {}
+  public environment = environment
 
   ngOnInit(): void {
   }
-
 }

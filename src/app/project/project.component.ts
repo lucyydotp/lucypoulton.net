@@ -1,9 +1,10 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Project, ProjectProvider} from "../project";
+import {Project} from "../project";
 import {DOCUMENT} from "@angular/common";
 import {marked} from "marked";
 import * as DOMPurify from "dompurify";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-project',
@@ -15,12 +16,12 @@ export class ProjectComponent implements OnInit {
   project: Project | undefined = undefined;
   private sub: any;
 
-  constructor(private route: ActivatedRoute, private projectProvider: ProjectProvider, @Inject(DOCUMENT) private document: Document) {
+  constructor(private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) {
   }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-      this.project = this.projectProvider.projects.find(project => project.name == params["project"])
+      this.project = environment.projects.find(project => project.name == params["project"])
 
       if (this.project?.longDescription == undefined)
         fetch(`https://raw.githubusercontent.com/${this.project?.repo}/master/README.md`)
