@@ -1,4 +1,5 @@
 import {Component, Input} from "@angular/core";
+import { ThemeService } from "./theme";
 
 @Component({
   selector: 'navbar',
@@ -8,14 +9,13 @@ import {Component, Input} from "@angular/core";
 export class NavbarComponent {
   @Input() title!: string;
 
+  constructor(private themeService: ThemeService) { }
+
+  ngInit() {
+
+  }
+
   toggle() {
-    const classes = document.body.classList;
-    if (classes.contains("bg-dark")) {
-      classes.add("bg-light");
-      classes.remove("bg-dark");
-    } else {
-      classes.add("bg-dark");
-      classes.remove("bg-light");
-    }
+    this.themeService.toggle();
   }
 }

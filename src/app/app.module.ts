@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './index/index.component';
 import { ProjectComponent } from './project/project.component';
 import {DelayDeactivateGuard} from "./delay";
+import { ThemeService } from './theme';
+import { CookieModule, CookieService } from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,11 @@ import {DelayDeactivateGuard} from "./delay";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CookieModule.forRoot()
   ],
-  providers: [DelayDeactivateGuard],
+  providers: [DelayDeactivateGuard, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
-    document.body.classList.add('bg-light');
-  }
 }
