@@ -17,8 +17,11 @@ export const environmentCommon = {
       name: "squirtgun",
       repo: "lucypoulton/squirtgun",
       displayName: "Squirtgun",
-      description: "Squirtgun is a ",
-      links: {}
+      description: "Squirtgun is a multi-purpose Java library that makes the development of cross-platform Minecraft server plugins and Discord bots easier.",
+      links: {
+        "Maven": "https://mvnrepository.com/search?q=squirtgun&d=net.lucypoulton",
+        "Javadoc": "https://javadoc.io/doc/net.lucypoulton/squirtgun-api/"
+      }
     }
   ]
 }

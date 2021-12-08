@@ -35,6 +35,10 @@ body {
   font-family: "Readex Pro", sans-serif;
 }
 
+code {
+  font-family: "Roboto Mono", monospace;
+}
+
 .bg-dark {
   background: var(--dark-primary);
   color: var(--light-primary);
