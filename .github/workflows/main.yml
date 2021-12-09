@@ -30,6 +30,8 @@ jobs:
           cp -r ../src/dist/lucypoulton-dot-net/* .
           cp index.html 404.html
           echo "lucypoulton.net" > CNAME
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-action@lucypoulton.net"
           git commit -am "${{ github.event.commits[0].id }}: ${{github.events.commits[0].message }}"
           git push origin github-pages
         
