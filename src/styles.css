@@ -82,6 +82,10 @@ a {
   user-select: none;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .bg-dark .button {
   background: var(--dark-secondary);
 }
