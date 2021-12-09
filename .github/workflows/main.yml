@@ -13,12 +13,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: "src"
-
-      - name: NPM install
-        run: npm install
-
+          
       - name: Build
-        run: cd src && ng build && cd ..
+        run: cd src && npm install && ng build && cd ..
 
       - name: Checkout deployment branch
         uses: actions/checkout@v2
