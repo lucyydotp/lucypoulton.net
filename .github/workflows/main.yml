@@ -26,7 +26,7 @@ jobs:
       - name: Copy files
         run: |
           cd dist
-          rm -rf . -v !(".git")
+          rm -rf !(".git")
           cp -r ../src/dist/lucypoulton-dot-net/* .
           cp index.html 404.html
           echo "lucypoulton.net" > CNAME
