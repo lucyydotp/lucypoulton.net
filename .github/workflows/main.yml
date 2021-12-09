@@ -32,6 +32,7 @@ jobs:
           echo "lucypoulton.net" > CNAME
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-action@lucypoulton.net"
+          git add .
           git commit -am "${{ github.event.commits[0].id }}: ${{github.events.commits[0].message }}"
           git push origin github-pages
         
