@@ -29,6 +29,6 @@ jobs:
           cp -r src/dist/lucypoulton-dot-net/* dist
           cp dist/index.html dist/404.html
           echo "lucypoulton.net" > dist/CNAME
-          git commit -am "${{ github.event.commits[0][id] }}: ${{github.events.commits[0][message] }}"
+          git commit -am "${{ github.event.commits[0].id }}: ${{github.events.commits[0].message }}"
           git push origin github-pages
         
