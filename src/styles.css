@@ -105,3 +105,11 @@ div.button:hover {
   transform: translateY(-100px) scaleY(2);
 
 }
+
+ul {
+  display: inline-block;
+}
+
+li {
+  text-align: left;
+}
