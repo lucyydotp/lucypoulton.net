@@ -105,15 +105,19 @@ div.button:hover {
   transform: scale(1.05, 1.05);
 }
 
-.bg-dark .dark-only, .bg-light .light-only {
-  transform: translateY(-100px) scaleY(2);
-
-}
-
 ul {
   display: inline-block;
 }
 
 li {
   text-align: left;
+}
+
+.bg-light .lightswitch {
+  top: 0;
+  transition: top cubic-bezier(.4,1, 1,-0.75);
+}
+
+.bg-dark .lightswitch {
+  top: -20px
 }

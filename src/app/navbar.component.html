@@ -1,2 +1,5 @@
 <span routerLink="/" style="text-align: center">{{title ?? "Lucy Poulton"}}</span>
-<span class="toggle" style="float:right" (click)="toggle()"><span class="dark-only">☾</span><span class="light-only">☼</span></span>
+<svg (click)="toggle()" class="lightswitch">
+  <path d="M 10 0 V 40"></path>
+  <path d="M 5 40 h 10 l 2 20 h -14 l 2 -20"></path>
+</svg>

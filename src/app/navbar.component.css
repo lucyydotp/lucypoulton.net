@@ -11,18 +11,11 @@
   background: var(--gradient-accent);
 }
 
-.toggle {
+.lightswitch {
+  width: 20px;
+  stroke: white;
+  fill: none;
   position: absolute;
   right: 1em;
-  user-select: none;
-}
-
-.toggle span {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  transition: transform 0.5s var(--transition-curve);
-  font-size: 0.8em;
-  width: 1em;
-  text-align: center;
+  transition: top 0.5s cubic-bezier(1,-0.75,.4,1);
 }
