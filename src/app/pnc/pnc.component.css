@@ -1,0 +1,28 @@
+label {
+    display: block;
+    margin: 1em;
+    font-size: 1.1em;
+}
+
+input[type=text] {
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    text-align: center;
+    width: 5em;
+    border-bottom: 1px solid var(--dark-secondary);
+}
+
+.output {
+    display: none;
+    margin-top: 3em;
+}
+
+.ng-invalid .output.error, .ng-valid .output.success {
+    display: inline-block;
+}
+
+input.ng-dirty.ng-invalid {
+    border-bottom: 3px solid var(--colour-red);
+}
