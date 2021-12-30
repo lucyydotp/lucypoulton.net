@@ -44,6 +44,10 @@ code {
   color: var(--light-primary);
 }
 
+.bg-dark * {
+  color: var(--light-primary);
+}
+
 .bg-light {
   background: var(--light-primary);
   color: var(--dark-primary);

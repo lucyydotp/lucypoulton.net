@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 export interface PronounSet {
   [key: string]: string | boolean;
@@ -8,7 +7,7 @@ export interface PronounSet {
   possessiveAdj: string;
   possessivePro: string;
   reflexive: string;
-  plural: boolean; 
+  plural: boolean;
 }
 
 interface Field {
@@ -24,7 +23,7 @@ interface Field {
   styleUrls: ['./pnc.component.css']
 })
 export class PncComponent {
-  
+
   readonly fields: Array<Field> = [
     {
       property: "subjective",
@@ -56,7 +55,7 @@ export class PncComponent {
       suffix: "."
     }
   ];
-  
+
   set: PronounSet = {
     subjective: '',
     objective: '',
@@ -69,4 +68,4 @@ export class PncComponent {
   setToString(set: PronounSet): string {
     return `${set.subjective}/${set.objective}/${set.possessiveAdj}/${set.possessivePro}/${set.reflexive}${set.plural ? ":p" : ""}`.toLowerCase();
   }
-}  
+}

@@ -1,28 +1,51 @@
 label {
-    display: block;
-    margin: 1em;
-    font-size: 1.1em;
+  display: block;
+  margin: 1em;
+  font-size: 1.1em;
 }
 
 input[type=text] {
-    font-size: 1em;
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    text-align: center;
-    width: 5em;
-    border-bottom: 1px solid var(--dark-secondary);
+  box-sizing: border-box;
+  font-size: 1em;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  text-align: center;
+  width: 5em;
+  border-bottom: 2px solid var(--dark-secondary);
+  border-radius: 2px;
+}
+
+input[type=text]:focus-visible {
+  outline: none;
 }
 
 .output {
-    display: none;
-    margin-top: 3em;
+  position: relative;
 }
 
-.ng-invalid .output.error, .ng-valid .output.success {
-    display: inline-block;
+.output > * {
+  opacity: 0;
+  margin-top: 10em;
+  transition: opacity 0.5s var(--transition-curve), margin-top 0.5s var(--transition-curve);
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+.ng-invalid .output > .error, .ng-valid .output > .success {
+  opacity: 1;
+  margin-top: 3em;
 }
 
 input.ng-dirty.ng-invalid {
-    border-bottom: 3px solid var(--colour-red);
+  border-bottom: 2px solid var(--colour-red);
+}
+
+.success > * {
+  display: block;
+}
+
+code {
+  font-size: 1.25em;
 }
