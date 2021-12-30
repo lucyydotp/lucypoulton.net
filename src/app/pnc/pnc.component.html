@@ -1,0 +1,24 @@
+<h2>Set your pronouns</h2>
+<h3>Complete the sentences:</h3>
+
+<form>
+  <label *ngFor="let field of fields" [for]="field.property">
+    {{field.prefix}}
+    <input type="text" [id]="field.property" [name]="field.property" [placeholder]="field.default"
+           [(ngModel)]="set[field.property]" pronounSet required>
+    {{field.suffix}}
+  </label>
+  <label for="plural">Plural <input type="checkbox" id="plural" name="plural" [(ngModel)]="set.plural">
+    <div>{{set.subjective || "They" }} {{set.plural ? "are" : "is"}} using a {{set.plural ? "plural" : "singular"}}
+      pronoun set.
+    </div>
+  </label>
+
+  <div class="output">
+    <div class="error">Fill out all the boxes. Only use letters A-Z.</div>
+    <div class="success">
+      Copy this command:
+      <code>/pronouns set {{setToString(set)}}</code>
+    </div>
+  </div>
+</form>

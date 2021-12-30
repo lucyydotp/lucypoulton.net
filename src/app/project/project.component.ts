@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Project} from "../project";
 import {DOCUMENT} from "@angular/common";
 import {marked} from "marked";
@@ -13,10 +13,12 @@ import {environment} from "../../environments/environment";
 })
 export class ProjectComponent implements OnInit {
 
+  Object = Object
+
   project: Project | undefined = undefined;
   private sub: any;
 
-  constructor(private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) {
+  constructor(private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -41,5 +43,9 @@ export class ProjectComponent implements OnInit {
 
   redirectToDownload() {
     document.defaultView!!.open(`https://github.com/${this.project?.repo}/releases/latest`, "_blank")
+  }
+
+  navigate(url: string) {
+    this.router.navigateByUrl(url);
   }
 }

@@ -10,7 +10,8 @@
     <p>Version {{project?.lastRelease}}</p>
   </div>
   <div class="links">
-  <span *ngFor="let link of project?.links| keyvalue"><a href="{{link.value}}">{{link.key}}</a></span>
+    <span *ngFor="let link of Object.keys(project?.links!!)"><a href="{{project?.links!![link] }}">{{link}}</a></span>
+    <span *ngFor="let link of Object.keys(project?.ngLinks!!)"><a [routerLink]="project?.ngLinks!![link]" routerLinkActive="active">{{link}}</a></span>
     <span><a href="https://github.com/{{project?.repo}}">Source</a></span>
     <span><a href="https://github.com/{{project?.repo}}/issues">Issues</a></span>
   </div>
