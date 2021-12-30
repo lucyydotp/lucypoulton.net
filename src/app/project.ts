@@ -5,5 +5,6 @@ export interface Project {
   description: String
   lastRelease?: String,
   longDescription?: String,
-  links: object
+  links: { [key: string]: string },
+  ngLinks: { [key: string]: string }
 }

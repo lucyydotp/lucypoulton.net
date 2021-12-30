@@ -11,6 +11,9 @@ export const environmentCommon = {
       description: "ProNouns is a Minecraft server plugin that lets players set their pronouns, which server admins can substitute into server messages.",
       links: {
         "Docs": "https://docs.lucypoulton.net/pronouns"
+      },
+      ngLinks: {
+        "Helper": "/pnc"
       }
     },
     {
@@ -21,7 +24,8 @@ export const environmentCommon = {
       links: {
         "Maven": "https://mvnrepository.com/search?q=squirtgun&d=net.lucypoulton",
         "Javadoc": "https://javadoc.io/doc/net.lucypoulton/squirtgun-api/"
-      }
+      },
+      ngLinks: {}
     }
   ]
 }
